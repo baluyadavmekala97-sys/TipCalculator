@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns="http://javafx.com/javafx/21"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="TipCalculatorController"
+      alignment="CENTER"
+      spacing="12">
+
+    <padding>
+        <Insets top="25" right="25" bottom="25" left="25"/>
+    </padding>
+
+    <Label text="Tip Calculator"
+           style="-fx-font-size: 22px; -fx-font-weight: bold;"/>
+
+    <Label text="Bill Amount:"/>
+
+    <TextField fx:id="billAmountField"
+               promptText="Enter bill amount"
+               maxWidth="250"/>
+
+    <Label text="Tip Percentage:"/>
+
+    <TextField fx:id="tipPercentageField"
+               promptText="Enter tip percentage"
+               maxWidth="250"/>
+
+    <Button text="Calculate Tip"
+            onAction="#calculateTip"
+            maxWidth="250"/>
+
+    <Label fx:id="tipAmountLabel"
+           text="Tip Amount:"
+           style="-fx-font-size: 16px; -fx-font-weight: bold;"/>
+
+    <Label fx:id="errorLabel"
+           wrapText="true"
+           style="-fx-text-fill: red;"/>
+
+    <Button text="Reset"
+            onAction="#reset"
+            maxWidth="250"/>
+
+</VBox>
